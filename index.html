@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formation Anglais & Lecture</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  header {
+    background-color: #004080;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #004080;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: auto;
+  }
+
+  /* Conteneur central */
+  .main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .class-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #004080;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #004080;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #00264d;
+  }
+
+  .form-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<header>UNIVERSITE PROTESTANTE DE LUBUMBASHI</header>
+
+<div class="main">
+  <div class="container">
+    <!-- Texte au-dessus du logo -->
+    <div class="class-text">BAC1 IAGE</div>
+    <!-- Logo à remplacer par votre image -->
+    <img src="logo.png" alt="Logo Anniversaire" class="logo">
+
+    <div class="form-title">Connexion Étudiant</div>
+
+    <div class="error" id="errorMsg"></div>
+
+    <form id="loginForm">
+      <input type="text" id="fullName" placeholder="Nom complet" required>
+      <input type="number" id="matricule" placeholder="Numéro matricule (10 chiffres)" required>
+      <button type="submit">Se connecter</button>
+    </form>
+  </div>
+</div>
+
+<footer>&copy; BAC1 IAGE Unité fraternité et réussite.</footer>
+
+<script>
+const form = document.getElementById('loginForm');
+const errorMsg = document.getElementById('errorMsg');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('fullName').value.trim();
+  const matricule = document.getElementById('matricule').value.trim();
+
+  // Vérification du formulaire
+  if(name === '' || matricule.length !== 10 || isNaN(matricule)) {
+    errorMsg.textContent = "Veuillez entrer un nom et un matricule de 10 chiffres.";
+    errorMsg.style.display = 'block';
+    return;
+  }
+
+  // Suppression de la vérification du matricule déjà utilisé
+  errorMsg.style.display = 'none';
+  // Redirection vers la page BAC1_IAGE.html
+  window.location.href = "BAC1_IAGE.html";
+});
+</script>
+
+</body>
+</html>

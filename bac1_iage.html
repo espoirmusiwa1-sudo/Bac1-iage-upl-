@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BAC1 IAGE</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background-color: #004080;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .logo-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .main {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .formation-anglais {
+    font-size: 28px;
+    font-weight: bold;
+    color: #004080;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .domaines {
+    font-size: 18px;
+    color: #004080;
+    text-align: left;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .domaines a {
+    color: #004080;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .domaines a.locked {
+    color: #999999;
+    cursor: pointer;
+  }
+
+  .domaines a:hover {
+    text-decoration: underline;
+  }
+
+  .message {
+    font-size: 22px;
+    font-weight: bold;
+    color: #004080;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-header">
+    <img src="logo.png" alt="Logo Anniversaire">
+    <span>BAC1 IAGE</span>
+  </div>
+  <div class="menu-icon">&#9776;</div>
+</header>
+
+<div class="main">
+  <div class="formation-anglais">SPÉCIALISONS-NOUS _CHOISIS UN DOMAINE_</div>
+
+  <div class="domaines">
+    <!-- Cours ouverts -->
+    <a href="informatique.html">1. SPÉCIALISTE AUX RÉSEAUX INFORMATIQUE</a>
+    <a href="ordi.html">2. SPÉCIALISTE À L'ARCHITECTURE DES ORDINATEURS</a>
+    <a href="télécom.html">3. SPÉCIALISTE AUX RÉSEAUX DE TÉLÉCOMS</a>
+
+    <!-- Cours verrouillés -->
+    <a href="verrou.html" class="locked">&#128274; 4. SPÉCIALISTE À L'OUTIL DE BUREAUTIQUES</a>
+    <a href="verrou.html" class="locked">&#128274; 5. SPÉCIALISTE À LA PROGRAMMATION & DÉVELOPPEMENT WEB</a>
+    <a href="verrou.html" class="locked">&#128274; 6. SPÉCIALISTE AU DESIGN GRAPHIQUE ET INTERNET</a>
+    <a href="verrou.html" class="locked">&#128274; 7. SPÉCIALISTE AU SYSTÈME D'EXPLOITATION</a>
+  </div>
+
+  <div class="message">
+    Notre avenir dépend de notre façon de voir les choses.<br>
+    Spécialise-toi en informatique et ton avenir sera meilleur.
+  </div>
+</div>
+
+<footer>&copy; 2026 BAC1 IAGE - Unité, Fraternité et Réussite</footer>
+
+</body>
+</html>

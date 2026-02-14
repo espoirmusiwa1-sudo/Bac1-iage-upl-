@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Architecture des Ordinateurs - BAC1 IAGE</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f4f8;
+  color: #003366;
+}
+
+header {
+  background-color: #004080;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+}
+
+.logo-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.main {
+  padding: 20px;
+}
+
+h1, h2, h3, h4 {
+  color: #004080;
+}
+
+p, ul, ol {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Images et placeholders redimensionnées */
+.partner-single-img, .image-placeholder {
+  max-width: 100%;   /* largeur maximale = largeur du conteneur */
+  height: auto;      /* hauteur ajustée automatiquement */
+  display: block;
+  margin: 20px 0;
+  border-radius: 8px;
+  border: 2px dashed #004080;
+  text-align: center;
+  font-weight: bold;
+  background-color: #d9e6f2;
+  line-height: 250px; /* pour centrer le texte verticalement */
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+}
+
+a {
+  color: #004080;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-header">
+    <img src="logo.png" alt="Logo BAC1 IAGE">
+    <span>BAC1 IAGE</span>
+  </div>
+  <div class="menu-icon">&#9776;</div>
+</header>
+
+<div class="main">
+
+<h1>Architecture des Ordinateurs</h1>
+
+<h2>1. Introduction</h2>
+<p>
+L’architecture des ordinateurs étudie la structure interne et l’organisation d’un ordinateur, incluant les composants matériels (hardware) et logiciels (software), ainsi que leur interaction. 
+Elle permet de comprendre comment un ordinateur exécute les programmes, gère les données et communique avec les périphériques.
+</p>
+
+<hr>
+
+<h2>2. Composants physiques et leur rôle</h2>
+<p>Voici les principaux composants internes d’un ordinateur et leur rôle :</p>
+<ul>
+  <li><strong>Boîtier :</strong> protège les composants internes et facilite la circulation de l’air pour le refroidissement.</li>
+  <li><strong>Carte mère :</strong> supporte tous les composants, permet la communication entre eux via les bus.</li>
+  <li><strong>Processeur (CPU) :</strong> exécute les instructions des programmes, coordonne toutes les opérations.</li>
+  <li><strong>Mémoire RAM :</strong> mémoire temporaire pour les programmes en cours d’exécution.</li>
+  <li><strong>Disque dur / SSD :</strong> stockage permanent des fichiers et programmes.</li>
+  <li><strong>Alimentation :</strong> fournit l’énergie électrique nécessaire au fonctionnement des composants.</li>
+  <li><strong>Carte graphique :</strong> gère l’affichage et le rendu des images et vidéos.</li>
+  <li><strong>Carte réseau :</strong> permet la connexion à un réseau LAN ou à Internet via câble ou Wi-Fi.</li>
+  <li><strong>Carte son :</strong> gère l’entrée et la sortie audio pour musique, vidéos ou enregistrement.</li>
+  <li><strong>Périphériques :</strong> clavier, souris, écran, imprimante, scanner, qui permettent d’interagir avec l’ordinateur.</li>
+</ul>
+
+<img src="ord.jpg" alt="Équipements réseau" class="partner-single-img">
+
+
+<hr>
+
+<h2>3. Processeur (CPU)</h2>
+<p>
+Le CPU est le cerveau de l’ordinateur. Il exécute les instructions des programmes et contrôle tous les éléments.
+</p>
+
+<h3>Composants internes du CPU :</h3>
+<ul>
+  <li><strong>UAL (ALU)</strong> : réalise les calculs arithmétiques et logiques.</li>
+  <li><strong>Unité de contrôle</strong> : dirige le flux des données et instructions entre CPU, mémoire et périphériques.</li>
+  <li><strong>Registres</strong> : petites mémoires rapides pour stocker temporairement les données et instructions en cours.</li>
+  <li><strong>Cache (L1, L2, L3)</strong> : mémoire rapide pour accélérer l’accès aux données fréquemment utilisées.
+  <h3>Conversion Fréquence → Temps d’un cycle</h3>
+<p>
+La fréquence d’un processeur (exprimée en Hz, MHz ou GHz) permet de calculer la durée d’un cycle avec la formule :
+</p>
+<p><strong>T = 1 / f</strong></p>
+<ul>
+  <li>T : durée d’un cycle (secondes)</li>
+  <li>f : fréquence du CPU (Hertz)</li>
+</ul>
+<p>Exemple : un processeur de 2 GHz :</p>
+<p>T = 1 / 2 000 000 000 ≈ 0,5 ns (nanoseconde)</p>
+<p>Chaque cycle d’horloge dure donc 0,5 nanoseconde.
+Autre exemple : Un processeur de 3.9 GHz traite combient des données par seconde ? calculs = 1:3.9*10 exposant 9 = 10exposant -9 / 39*10 exposant -1 = 10 exposant -9 * 10 exposant 1 / 39 = 1*10 exposant -8 = 0,0256410256410* 10 exposant -8 sec</p>
+</li>
+  
+</ul>
+
+<h3>Caractéristiques :</h3>
+<ul>
+  <li>Fréquence (GHz) : vitesse d’exécution des instructions.</li>
+  <li>Nombre de cœurs : permet le traitement parallèle de plusieurs tâches.</li>
+  <li>Architecture 32 ou 64 bits : définit la taille des données manipulées et la mémoire adressable.</li>
+</ul>
+
+
+<hr>
+
+<h2>4. Mémoire</h2>
+
+<h3>4.1 Mémoire vive (RAM)</h3>
+<p>Stocke temporairement les données et programmes en cours d’utilisation. Plus la RAM est grande, plus l’ordinateur peut exécuter de programmes simultanément.</p>
+<ul>
+  <li>SRAM : très rapide, utilisée pour le cache du CPU.</li>
+  <li>DRAM : mémoire principale utilisée par les programmes actifs.</li>
+  <li>DDR4 / DDR5 : technologies modernes offrant plus de vitesse et efficacité.</li>
+</ul>
+
+<h3>4.2 Mémoire morte (ROM)</h3>
+<p>Stocke de manière permanente les instructions essentielles pour le démarrage et le fonctionnement de l’ordinateur.</p>
+<ul>
+  <li>ROM : mémoire permanente.</li>
+  <li>PROM : programmable une seule fois par l’utilisateur.</li>
+  <li>EPROM : programmable et effaçable via UV.</li>
+  <li>EEPROM : programmable et effaçable électriquement.</li>
+</ul>
+
+<h3>4.3 Catégorie selon accès</h3>
+<ul>
+  <li>Mémoire à lecture seule : lecture seule (ROM).</li>
+  <li>Mémoire à écriture seule : écriture seulement (rare).</li>
+  <li>Mémoire à lecture/écriture : lecture et modification possible (RAM, disque dur).</li>
+</ul>
+
+
+<hr>
+
+<h2>5. Bus</h2>
+<p>Les bus sont des voies de communication qui transportent les données, adresses et signaux de contrôle entre composants.</p>
+<ul>
+  <li><strong>Bus de données :</strong> transporte les données.</li>
+  <li><strong>Bus d’adresse :</strong> indique l’emplacement mémoire ou périphérique ciblé.</li>
+  <li><strong>Bus de contrôle :</strong> transmet les signaux de commande et synchronisation.</li>
+</ul>
+
+<hr>
+
+<h2>6. Parties logicielles (Software)</h2>
+<p>Les logiciels permettent au matériel d’exécuter des tâches spécifiques.</p>
+<ul>
+  <li><strong>Systèmes d’exploitation :</strong> gèrent les ressources matérielles et fournissent une interface utilisateur (Windows, Linux, macOS).</li>
+  <li><strong>Logiciels d’application :</strong> effectuent des tâches spécifiques (traitement de texte, tableur, navigateur).</li>
+  <li><strong>Logiciels utilitaires :</strong> assurent la sécurité et l’entretien (antivirus, sauvegarde).</li>
+</ul>
+<hr>
+
+<h2>7. Périphériques</h2>
+<ul>
+  <li>Clavier et souris : saisie des données et navigation.</li>
+  <li>Écran / moniteur : affichage visuel.</li>
+  <li>Imprimante / scanner : entrée/sortie physique.</li>
+  <li>Disques externes : stockage et transfert de données.</li>
+</ul>
+
+<hr>
+
+<h2>8. Fonctionnement global</h2>
+<p>Cycle simple mais efficace :</p>
+<ol>
+  <li><strong>Entrée :</strong> saisie via périphériques.</li>
+  <li><strong>Traitement :</strong> CPU exécute instructions et calcule résultats.</li>
+  <li><strong>Stockage :</strong> RAM ou disque dur conserve données et résultats.</li>
+  <li><strong>Sortie :</strong> résultats affichés ou imprimés.</li>
+</ol>
+
+
+<hr>
+
+<h2>9. Conseils pratiques</h2>
+<ul>
+  <li>Organiser et documenter les composants pour un dépannage facile.</li>
+  <li>Mettre à jour système et logiciels régulièrement.</li>
+  <li>Tester périphériques et câbles pour assurer le bon fonctionnement.</li>
+</ul>
+<hr>
+
+<h2>10. Exercices et Questions</h2>
+
+<p>Répondez aux questions suivantes pour vérifier votre compréhension de l’architecture des ordinateurs :</p>
+
+<ol>
+  <li><strong>Composants matériels :</strong> Citez les composants principaux d’un ordinateur et expliquez le rôle de chacun.</li>
+  <li><strong>Processeur :</strong> Quelles sont les fonctions de l’UAL, de l’unité de contrôle et des registres ?</li>
+  <li><strong>Mémoire :</strong> Quelle est la différence entre RAM et ROM ? Donnez des exemples de types de RAM et de ROM.</li>
+  <li><strong>Catégorie de mémoire :</strong> Expliquez la différence entre mémoire à lecture seule, mémoire à écriture seule et mémoire à lecture/écriture.</li>
+  <li><strong>Bus :</strong> Quel est le rôle des bus de données, d’adresse et de contrôle ?</li>
+  <li><strong>Périphériques :</strong> Donnez des exemples de périphériques d’entrée et de sortie et expliquez leur rôle.</li>
+  <li><strong>Fréquence du CPU :</strong> Si un processeur a une fréquence de 3 GHz, calculez la durée d’un cycle d’horloge.</li>
+  <li><strong>Cycle de fonctionnement :</strong> Décrivez le cycle global d’un ordinateur, de l’entrée des données à la sortie des résultats.</li>
+  <li><strong>Logiciels :</strong> Quelle est la différence entre un système d’exploitation, un logiciel d’application et un logiciel utilitaire ?</li>
+  <li><strong>Schémas et images :</strong> Pour chaque composant clé, indiquez ce que vous pourriez représenter sur un schéma pour mieux comprendre son rôle.</li>
+</ol>
+</div>
+
+<footer>&copy; BAC1 IAGE - Architecture des Ordinateurs</footer>
+
+</body>
+</html>

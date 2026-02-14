@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Réseau Informatique - BAC1 IAGE</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+  header {
+    background-color: #004080;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  .logo-header {
+    display: flex;
+    align-items: center;
+  }
+  .logo-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  /* Main contenu */
+  .main {
+    flex: 1;
+    padding: 20px;
+  }
+
+  h1 {
+    color: #004080;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    color: #004080;
+    font-size: 22px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    color: #004080;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+
+  ul, ol {
+    margin-bottom: 15px;
+  }
+
+  /* Images explicatives */
+  .partner-single-img, .image-placeholder {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+  }
+
+  /* Placeholder pour images à ajouter */
+  .image-placeholder {
+    background-color: #d9e6f2;
+    border: 2px dashed #004080;
+    color: #004080;
+    font-size: 18px;
+    font-weight: bold;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+  }
+
+  a {
+    color: #004080;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-header">
+    <img src="logo.png" alt="Logo Anniversaire">
+    <span>BAC1 IAGE</span>
+  </div>
+  <div class="menu-icon">&#9776;</div>
+</header>
+
+<div class="main">
+  <h1>Cours : Réseau Informatique</h1>
+
+  <p>
+    Un réseau informatique est un ensemble de dispositifs reliés entre eux pour partager des informations, des fichiers et des ressources comme des imprimantes ou des connexions internet. Comprendre les bases des réseaux est essentiel pour tout informaticien.
+  </p>
+
+  <h2>1. Types de Réseaux</h2>
+  <ul>
+    <li>LAN (Local Area Network) : réseau local pour une maison, un bureau ou une école.</li>
+    <li>WAN (Wide Area Network) : réseau étendu, souvent pour connecter plusieurs villes ou pays.</li>
+    <li>MAN (Metropolitan Area Network) : réseau pour une ville ou une grande zone géographique.</li>
+  </ul>
+  
+
+  <h2>2. Composants d’un réseau</h2>
+  <ul>
+    <li>Ordinateurs et serveurs</li>
+    <li>Switches et routeurs</li>
+    <li>Câbles réseau (RJ45)</li>
+    <li>Points d’accès Wi-Fi</li>
+  </ul>
+  <img src="Eq.jpg" alt="Équipements réseau" class="partner-single-img">
+
+  <h2>3. Câblage RJ45</h2>
+  <p>
+    Les câbles RJ45 sont utilisés pour connecter les ordinateurs aux switches ou aux routeurs. Chaque câble contient 8 fils de couleurs spécifiques et doit être câblé correctement pour assurer une communication stable.
+  </p>
+ 
+<img src="rj.jpg" alt="rj réseau" class="partner-single-img">
+  <h2>4. Exemple de câblage</h2>
+  <ol>
+    <li>Couper le câble à la bonne longueur.</li>
+    <li>Dénuder environ 2 cm de la gaine externe.</li>
+    <li>Disposer les fils selon la norme T568B : orange/blanc, orange, vert/blanc, bleu, bleu/blanc, vert, marron/blanc, marron.</li>
+    <li>Insérer les fils dans le connecteur RJ45.</li>
+    <li>Presser avec une pince à sertir.</li>
+  </ol>
+  
+
+  <h2>5. Configuration d’un réseau local</h2>
+  <ul>
+    <li>Attribuer une adresse IP à chaque ordinateur (exemple : 192.168.1.x).</li>
+    <li>Définir le masque de sous-réseau (exemple : 255.255.255.0).</li>
+    <li>Connecter tous les ordinateurs à un switch avec des câbles RJ45.</li>
+    <li>Tester la connectivité avec la commande <code>ping</code>.</li>
+  </ul>
+  <img src="res.jpg" alt="Équi réseau" class="partner-single-img">
+
+  <h2>6. Conseils pratiques</h2>
+  <ul>
+    <li>Toujours tester vos câbles avant de les installer.</li>
+    <li>Utiliser des couleurs différentes pour les câbles pour une meilleure organisation.</li>
+    <li>Documenter votre réseau pour faciliter les dépannages futurs.</li>
+  </ul>
+   <!-- Section OSI -->
+  <h2>7. Le Modèle OSI</h2>
+  <p>
+    Le modèle OSI (Open Systems Interconnection) est une norme qui décrit comment les informations circulent dans un réseau. Il permet de comprendre, de concevoir et de dépanner les systèmes de communication en séparant les fonctions réseau en 7 couches distinctes.
+  </p>
+
+  <h3>Rôle et importance du modèle OSI :</h3>
+  <ul>
+    <li>Fournir une structure pour le développement et la compréhension des protocoles réseau.</li>
+    <li>Permettre la compatibilité et l’interopérabilité entre différents systèmes.</li>
+    <li>Simplifier le dépannage et l’analyse des problèmes réseau.</li>
+  </ul>
+
+  <h3>Les 7 couches du modèle OSI :</h3>
+
+  <ol>
+    <li><strong>Couche 1 : Physique</strong> - Transmission des bits sur un support physique (câbles, fibres, ondes radio). Exemples : RJ45, fibre optique.</li>
+    <li><strong>Couche 2 : Liaison de données</strong> - Assure une transmission fiable entre deux machines sur le même réseau. Exemples : Ethernet, MAC, Switch.</li>
+    <li><strong>Couche 3 : Réseau</strong> - Acheminement des paquets d’une machine à une autre sur plusieurs réseaux. Exemples : IP, routeur.</li>
+    <li><strong>Couche 4 : Transport</strong> - Transport fiable des données d’une application à une autre. Exemples : TCP, UDP.</li>
+    <li><strong>Couche 5 : Session</strong> - Gestion des sessions de communication entre applications. Exemples : ouverture et fermeture de sessions.</li>
+    <li><strong>Couche 6 : Présentation</strong> - Conversion des formats et encodages pour que les applications comprennent les données. Exemples : SSL, chiffrement, compression.</li>
+    <li><strong>Couche 7 : Application</strong> - Interface directe avec l’utilisateur et les applications. Exemples : HTTP, FTP, SMTP.</li>
+  </ol>
+
+  <img src="osi.jpg" alt="osi réseau" class="partner-single-img">
+
+
+  <!-- Section TCP/IP -->
+  <h2>8. Le Modèle TCP/IP</h2>
+  <p>
+    Le modèle TCP/IP est le protocole fondamental d’Internet. Il comporte 4 couches principales et est utilisé pour la communication sur les réseaux modernes.
+  </p>
+
+  <h3>Les 4 couches du modèle TCP/IP :</h3>
+  <ol>
+    <li><strong>Couche Accès Réseau</strong> - Correspond aux couches Physique et Liaison du modèle OSI. Gère le matériel et la transmission des données.</li>
+    <li><strong>Couche Internet</strong> - Correspond à la couche Réseau de l’OSI. Responsable de l’adressage IP et du routage des paquets.</li>
+    <li><strong>Couche Transport</strong> - Correspond à la couche Transport de l’OSI. Gère le transport fiable (TCP) ou non fiable (UDP).</li>
+    <li><strong>Couche Application</strong> - Regroupe les fonctions des couches Session, Présentation et Application de l’OSI. Exemples : HTTP, FTP, SMTP.</li>
+  </ol>
+<img src="tcp.jpg" alt="tc réseau" class="partner-single-img">
+
+  <!-- Comparaison OSI / TCP/IP -->
+  <h2>9. Différences entre OSI et TCP/IP</h2>
+  <ul>
+    <li>Le modèle OSI comporte 7 couches, TCP/IP en a 4 couches principales.</li>
+    <li>OSI est un modèle théorique utilisé pour comprendre les réseaux, TCP/IP est un protocole pratique utilisé sur Internet.</li>
+    <li>Les couches du TCP/IP regroupent certaines couches de l’OSI (exemple : couche Application regroupe 5,6,7 de l’OSI).</li>
+    <li>OSI est plus détaillé et pédagogique, TCP/IP est plus simple et utilisé pour la mise en œuvre réelle.</li>
+  </ul>
+  <hr>
+
+<h2>10. Les Différentes Topologies Physiques</h2>
+
+<p>
+Une topologie physique définit la manière dont les équipements d’un réseau sont connectés
+physiquement entre eux. Le choix d’une topologie influence la performance, la sécurité,
+la fiabilité et le coût d’installation du réseau.
+</p>
+<!-- 1. TOPOLOGIE EN ÉTOILE -->
+
+<h3>1. Topologie en Étoile</h3>
+
+<p>
+Dans une topologie en étoile, tous les ordinateurs sont connectés à un équipement central
+appelé switch ou hub. Toutes les communications passent par cet équipement central.
+</p>
+<img src="etoile.jpg" alt="Équipements réseau" class="partner-single-img">
+
+
+<div class="example-box">
+Exemple pratique :  
+Dans une salle informatique moderne, chaque ordinateur est connecté
+à un switch central via un câble RJ45.
+</div>
+
+<strong>Avantages :</strong>
+<ul>
+  <li>Facile à installer et à gérer</li>
+  <li>Si un câble est coupé, seul l’ordinateur concerné est affecté</li>
+  <li>Bonne performance avec un switch</li>
+</ul>
+
+<strong>Inconvénients :</strong>
+<ul>
+  <li>Si le switch tombe en panne, tout le réseau s’arrête</li>
+  <li>Nécessite plus de câbles</li>
+</ul>
+
+<hr>
+
+<!-- 2. TOPOLOGIE EN ANNEAU BUS -->
+
+<h3>2. Topologie en Anneau-Bus</h3>
+
+<p>
+La topologie anneau-bus combine les caractéristiques de la topologie en bus
+et de la topologie en anneau. Les équipements sont reliés en ligne,
+mais le signal peut circuler de manière organisée comme dans un anneau.
+</p>
+<img src="ann.jpg" alt="Équipements réseau" class="partner-single-img">
+
+
+<strong>Avantages :</strong>
+<ul>
+  <li>Structure simple</li>
+  <li>Organisation plus contrôlée que le bus simple</li>
+</ul>
+
+<strong>Inconvénients :</strong>
+<ul>
+  <li>Complexité supérieure au bus classique</li>
+  <li>Dépend fortement du câble principal</li>
+</ul>
+
+<hr>
+
+<!-- 3. TOPOLOGIE EN ÉTOILE ÉTENDUE -->
+
+<h3>3. Topologie en Étoile Étendue</h3>
+
+<p>
+La topologie en étoile étendue est une extension de la topologie en étoile.
+Plusieurs switchs sont connectés à un switch principal.
+</p>
+
+<img src="et.jpg" alt="Équipements réseau" class="partner-single-img">
+
+
+<div class="example-box">
+Exemple pratique :  
+Un bâtiment avec plusieurs étages.
+Chaque étage possède un switch relié à un switch central principal.
+</div>
+
+<strong>Avantages :</strong>
+<ul>
+  <li>Idéal pour les grandes entreprises</li>
+  <li>Facile à étendre</li>
+  <li>Bonne organisation du réseau</li>
+</ul>
+
+<strong>Inconvénients :</strong>
+<ul>
+  <li>Dépendance au switch principal</li>
+</ul>
+
+<hr>
+
+<!-- 4. TOPOLOGIE EN ANNEAU -->
+
+<h3>4. Topologie en Anneau</h3>
+
+<p>
+Dans la topologie en anneau, chaque ordinateur est connecté à deux autres ordinateurs,
+formant ainsi un cercle fermé. Les données circulent dans un seul sens.
+</p>
+
+<img src="anno.jpg" alt="Équipements réseau" class="partner-single-img">
+
+
+<div class="example-box">
+Exemple pratique :  
+Le système Token Ring utilisait cette topologie pour contrôler la transmission des données.
+</div>
+
+<strong>Avantages :</strong>
+<ul>
+  <li>Moins de collisions</li>
+  <li>Transmission organisée</li>
+</ul>
+
+<strong>Inconvénients :</strong>
+<ul>
+  <li>Si un poste tombe en panne, tout le réseau peut être affecté</li>
+  <li>Difficile à modifier</li>
+</ul>
+
+<hr>
+
+<!-- 5. TOPOLOGIE MAILLÉE -->
+
+<h3>5. Topologie Maillée</h3>
+
+<p>
+Dans une topologie maillée, chaque équipement est connecté à plusieurs autres équipements.
+Il existe deux types : maillage complet et maillage partiel.
+</p>
+<img src="mel.jpg" alt="Équipements réseau" class="partner-single-img">
+
+
+<strong>Avantages :</strong>
+<ul>
+  <li>Très grande fiabilité</li>
+  <li>Si un lien tombe en panne, les données passent par un autre chemin</li>
+  <li>Utilisée dans les réseaux critiques</li>
+</ul>
+
+<strong>Inconvénients :</strong>
+<ul>
+  <li>Très coûteuse</li>
+  <li>Complexe à installer</li>
+</ul>
+
+<hr>
+
+<!-- 6. TOPOLOGIE HIÉRARCHIQUE -->
+
+<h3>6. Topologie Hiérarchique</h3>
+
+<p>
+La topologie hiérarchique (ou en arbre) organise le réseau en plusieurs niveaux.
+Elle ressemble à une structure d’arbre avec un nœud principal et plusieurs sous-nœuds.
+</p>
+<img src="ar.jpg" alt="Équipements réseau" class="partner-single-img">
+
+
+<div class="example-box">
+Exemple pratique :  
+Un réseau universitaire avec un routeur principal,
+des switchs secondaires et des sous-réseaux par département.
+</div>
+<hr>
+
+<h2>8. Les Réseaux Publics et Privés</h2>
+
+<p>
+Les réseaux informatiques peuvent être classés selon leur accessibilité.
+On distingue principalement les réseaux publics (internationaux) et les réseaux privés.
+Cette distinction est très importante en matière de sécurité et d’administration réseau.
+</p>
+
+<!-- RESEAU PUBLIC -->
+
+<h3>1. Réseau Public (Réseau International)</h3>
+
+<p>
+Un réseau public est un réseau accessible à tout le monde.
+Le plus grand exemple de réseau public est Internet.
+Il permet la communication entre des millions d’ordinateurs à travers le monde.
+</p>
+
+<div class="example-box">
+Exemple :  
+Quand vous naviguez sur un site web, envoyez un email ou utilisez les réseaux sociaux,
+vous utilisez un réseau public.
+</div>
+
+<strong>Caractéristiques :</strong>
+<ul>
+  <li>Accessible au grand public</li>
+  <li>Connexion mondiale</li>
+  <li>Moins sécurisé par défaut</li>
+  <li>Nécessite des mesures de sécurité (pare-feu, VPN, chiffrement)</li>
+</ul>
+
+<strong>Avantages :</strong>
+<ul>
+  <li>Communication internationale</li>
+  <li>Accès à l’information mondiale</li>
+</ul>
+
+<strong>Inconvénients :</strong>
+<ul>
+  <li>Risques de cyberattaques</li>
+  <li>Moins de contrôle sur les données</li>
+</ul>
+
+<hr>
+
+<!-- RESEAU PRIVE -->
+
+<h3>2. Réseau Privé</h3>
+
+<p>
+Un réseau privé est un réseau réservé à un groupe spécifique d’utilisateurs.
+Il est généralement utilisé dans une entreprise, une école ou une organisation.
+</p>
+
+<div class="example-box">
+Exemple :  
+Le réseau interne d’une université permettant aux étudiants d’accéder
+aux serveurs pédagogiques.
+</div>
+
+<strong>Caractéristiques :</strong>
+<ul>
+  <li>Accès limité</li>
+  <li>Contrôle total par l’organisation</li>
+  <li>Plus sécurisé</li>
+</ul>
+
+<hr>
+
+<h3>3. Réseau Interne (Intranet)</h3>
+
+<p>
+Un réseau interne est une partie du réseau privé accessible uniquement
+aux membres de l’organisation.
+On l’appelle souvent Intranet.
+</p>
+
+<div class="example-box">
+Exemple :  
+Un portail interne permettant aux employés de consulter leurs documents,
+notes ou informations administratives.
+</div>
+
+<strong>Avantages :</strong>
+<ul>
+  <li>Haute sécurité</li>
+  <li>Partage rapide des ressources internes</li>
+  <li>Communication efficace entre services</li>
+</ul>
+
+<hr>
+
+<h3>4. Réseau Externe (Extranet)</h3>
+
+<p>
+Un réseau externe est une extension du réseau privé permettant l’accès
+à des partenaires externes autorisés (clients, fournisseurs).
+On l’appelle Extranet.
+</p>
+<div class="example-box">
+Exemple :  
+Une entreprise permet à ses fournisseurs d’accéder à son système
+de gestion des commandes via un accès sécurisé.
+</div>
+
+<strong>Caractéristiques :</strong>
+<ul>
+  <li>Accès contrôlé</li>
+  <li>Nécessite authentification</li>
+  <li>Utilise souvent VPN et chiffrement</li>
+</ul>
+
+<hr>
+
+<h2>Résumé Comparatif</h2>
+
+<table border="1" cellpadding="8" cellspacing="0">
+<tr>
+  <th>Type de réseau</th>
+  <th>Accessibilité</th>
+  <th>Exemple</th>
+</tr>
+<tr>
+  <td>Réseau Public</td>
+  <td>Tout le monde</td>
+  <td>Internet</td>
+</tr>
+<tr>
+  <td>Réseau Privé</td>
+  <td>Membres autorisés</td>
+  <td>Réseau d'entreprise</td>
+</tr>
+<tr>
+  <td>Intranet</td>
+  <td>Interne uniquement</td>
+  <td>Portail interne</td>
+</tr>
+<tr>
+  <td>Extranet</td>
+  <td>Partenaires externes</td>
+  <td>Accès fournisseur sécurisé</td>
+</tr>
+</table>
+<strong>Avantages :</strong>
+<ul>
+  <li>Bonne organisation</li>
+  <li>Facile à gérer dans les grandes structures</li>
+</ul>
+
+<strong>Inconvénients :</strong>
+<ul>
+  <li>Dépendance au niveau supérieur</li>
+  <li>Configuration plus complexe</li>
+</ul>
+<hr>
+
+<h2>9. Exercices et Travaux Pratiques</h2>
+
+<p>
+Cette section permet aux étudiants de tester leurs connaissances
+sur toutes les notions étudiées : modèles OSI et TCP/IP,
+topologies, types de réseaux et configuration réseau.
+</p>
+
+<!-- ====================== -->
+<h3>Partie A : Questions Théoriques</h3>
+
+<ol>
+  <li>Définir un réseau informatique.</li>
+  <li>Expliquer le rôle du modèle OSI.</li>
+  <li>Combien de couches contient le modèle OSI ? Les citer dans l’ordre.</li>
+  <li>Quelle est la différence entre TCP et UDP ?</li>
+  <li>Quelle est la différence entre un réseau public et un réseau privé ?</li>
+  <li>Expliquer la différence entre Intranet et Extranet.</li>
+  <li>Quels sont les avantages de la topologie en étoile ?</li>
+  <li>Pourquoi la topologie en bus est-elle moins utilisée aujourd’hui ?</li>
+</ol>
+
+<hr>
+
+<!-- ====================== -->
+<h3>Partie B : QCM (Choisir la bonne réponse)</h3>
+
+<ol>
+  <li>Le modèle OSI contient :
+    <ul>
+      <li>a) 4 couches</li>
+      <li>b) 5 couches</li>
+      <li>c) 7 couches</li>
+      <li>d) 8 couches</li>
+    </ul>
+  </li>
+
+  <li>Le protocole IP appartient à :
+    <ul>
+      <li>a) Couche Transport</li>
+      <li>b) Couche Réseau</li>
+      <li>c) Couche Application</li>
+      <li>d) Couche Session</li>
+    </ul>
+  </li>
+
+  <li>Dans une topologie en étoile, l’élément central est :
+    <ul>
+      <li>a) Routeur</li>
+      <li>b) Switch</li>
+      <li>c) Câble coaxial</li>
+      <li>d) Serveur</li>
+    </ul>
+  </li>
+
+  <li>Internet est un exemple de :
+    <ul>
+      <li>a) Réseau privé</li>
+      <li>b) Réseau interne</li>
+      <li>c) Réseau public</li>
+      <li>d) Réseau local isolé</li>
+    </ul>
+  </li>
+</ol>
+
+<hr>
+
+<!-- ====================== -->
+<h3>Partie C : Exercices Pratiques</h3>
+
+<h4>Exercice 1 : Identification des couches</h4>
+<p>
+Associer chaque élément à sa couche OSI correspondante :
+</p>
+
+<ul>
+  <li>Adresse IP</li>
+  <li>Câble RJ45</li>
+  <li>HTTP</li>
+  <li>TCP</li>
+  <li>Switch</li>
+</ul>
+
+<h4>Exercice 2 : Configuration réseau</h4>
+
+<p>
+On vous donne les informations suivantes :
+</p>
+
+<ul>
+  <li>Adresse IP : 192.168.1.10</li>
+  <li>Masque : 255.255.255.0</li>
+  <li>Passerelle : 192.168.1.1</li>
+</ul>
+
+<p>
+1. Indiquez la classe de cette adresse IP.  
+2. Combien d’hôtes peut contenir ce réseau ?  
+3. Donnez un exemple d’une autre adresse valide dans ce même réseau.
+</p>
+
+<hr>
+
+<h4>Exercice 3 : Étude de cas</h4>
+
+<p>
+Une entreprise possède 3 étages. Chaque étage contient 20 ordinateurs.
+L’entreprise souhaite :
+</p>
+
+<ul>
+  <li>Une bonne performance</li>
+  <li>Une extension facile du réseau</li>
+  <li>Une bonne sécurité</li>
+</ul>
+
+<p>
+Questions :
+</p>
+
+<ol>
+  <li>Quelle topologie recommandez-vous ?</li>
+  <li>Pourquoi ?</li>
+  <li>Quel type de réseau sera utilisé (public ou privé) ?</li>
+</ol>
+
+<hr>
+
+<h4>Exercice 4 : Câblage RJ45</h4>
+
+<p>
+1. Citer l’ordre des couleurs selon la norme T568B.  
+2. Pourquoi faut-il utiliser un testeur de câble ?  
+3. Que se passe-t-il si deux fils sont inversés ?
+</p>
+
+<hr>
+
+<!-- ====================== -->
+<h3>Partie D : Travaux Pratiques (TP)</h3>
+
+<h4>TP 1 : Création d’un réseau local</h4>
+
+<ol>
+  <li>Connecter 2 ordinateurs à un switch.</li>
+  <li>Configurer une adresse IP sur chaque machine.</li>
+  <li>Tester la connexion avec la commande <code>ping</code>.</li>
+  <li>Faire une capture d’écran des résultats.</li>
+</ol>
+
+<h4>TP 2 : Analyse des couches</h4>
+
+<p>
+Observer une communication web et identifier les protocoles utilisés
+dans chaque couche (HTTP, TCP, IP, Ethernet).
+</p>
+
+<hr>
+
+<h3>Bonus : Question de réflexion</h3>
+
+<p>
+Expliquez pourquoi le modèle OSI est important même si le modèle TCP/IP
+est celui utilisé en pratique sur Internet.
+</p>
+</div>
+
+<footer>&copy; BAC1 IAGE - Unité, Fraternité et Réussite</footer>
+
+</body>
+</html>
